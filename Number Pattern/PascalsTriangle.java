@@ -3,7 +3,7 @@ public class PascalsTriangle {
         int rows = 6;
 
         for (int i = 0; i < rows; i++) {
-            // FIXED: Print more spaces to shift triangle to center
+            // Print more spaces to shift triangle to center
             for (int space = 1; space <= rows - i; space++) {
                 System.out.print(" ");  // triple space instead of double
             }
