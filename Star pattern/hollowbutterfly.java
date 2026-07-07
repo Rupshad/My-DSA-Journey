@@ -1,59 +1,65 @@
-public class hollowbutterfly {
+public class HollowButterfly {
+
     public static void main(String[] args) {
-        int n=4;
-        for(int i=1;i<=n;i++){
-            for(int j=1;j<=i;j++){
-                if(j==1||j==i){
+
+        int n = 4;
+
+        // Upper half
+        for (int i = 1; i <= n; i++) {
+
+            // Left wing
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i) {
                     System.out.print("*");
-                }
-                else{
+                } else {
                     System.out.print(" ");
                 }
             }
-            for(int j=1;j<=2*(n-i);j++){
-            
-                    System.out.print(" ");
-                }
-                
-            
-            for(int j=1;j<=i;j++){
-                if(j==1||j==i){
+
+            // Middle spaces
+            for (int j = 1; j <= 2 * (n - i); j++) {
+                System.out.print(" ");
+            }
+
+            // Right wing
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i) {
                     System.out.print("*");
-                }
-                else{
+                } else {
                     System.out.print(" ");
                 }
             }
+
             System.out.println();
-
-        
-
-    
-}
-     for(int i=n;i>=1;i--){
-        for(int j=1;j<=i;j++){
-            if(j==1||j==i){
-                System.out.print("*");
-            }
-            else{
-                System.out.print(" ");
-            }
         }
-        for(int j=1;j<=2*(n-i);j++){
-            System.out.print(" ");
-        }
-        for(int j=1;j<=i;j++){
-            if(j==1||j==i){
-                System.out.print("*");
+
+        // Lower half
+        for (int i = n - 1; i >= 1; i--) {
+
+            // Left wing
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
             }
-            else{
+
+            // Middle spaces
+            for (int j = 1; j <= 2 * (n - i); j++) {
                 System.out.print(" ");
             }
 
-        
-     
-    }
-    System.err.println();
-}
+            // Right wing
+            for (int j = 1; j <= i; j++) {
+                if (j == 1 || j == i) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            System.out.println();
+        }
     }
 }
