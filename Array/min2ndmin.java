@@ -1,67 +1,76 @@
 import java.util.*;
-public class min2ndmin{
+
+public class MinAndSecondMin {
+
+    // Function to find the minimum and second minimum elements
     public ArrayList<Integer> minAnd2ndMin(int[] arr) {
-        // code here
-        ArrayList<Integer> result=new ArrayList<>();
-        
-        if(arr.length<2){
+
+        ArrayList<Integer> result = new ArrayList<>();
+
+        // If the array has less than two elements,
+        // a second minimum cannot exist
+        if (arr.length < 2) {
             result.add(-1);
-            
             return result;
         }
-        
-        int min=Integer.MAX_VALUE;
-        int secondMin=Integer.MAX_VALUE;
-        
-        for(int num:arr){
-            if(num<min){
-                secondMin=min;
-                min=num;
+
+        int min = Integer.MAX_VALUE;
+        int secondMin = Integer.MAX_VALUE;
+
+        // Traverse the array
+        for (int num : arr) {
+
+            // Update both minimum and second minimum
+            if (num < min) {
+                secondMin = min;
+                min = num;
             }
-            else if(num>min && num<secondMin){
-                secondMin=num;
+
+            // Update only the second minimum
+            else if (num > min && num < secondMin) {
+                secondMin = num;
             }
         }
-        
-        if(secondMin==Integer.MAX_VALUE){
+
+        // If second minimum was never updated
+        if (secondMin == Integer.MAX_VALUE) {
             result.add(-1);
-        
-        }
-        else{
+        } else {
             result.add(min);
             result.add(secondMin);
         }
+
         return result;
     }
-    
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-        Solution s=new Solution();
-        
-        System.out.print("Enter size or array:");
-        int n=sc.nextInt();
-        
-        int[]arr=new int[n];
-        System.out.println("Enter elements for array:");
-        for(int i=0;i<n;i++){
-            arr[i]=sc.nextInt();
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        MinAndSecondMin obj = new MinAndSecondMin();
+
+        // Read array size
+        System.out.print("Enter the size of the array: ");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        // Read array elements
+        System.out.println("Enter the array elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
         }
-        
-        ArrayList<Integer> ans= s.min2ndMin(arr);
-        
-        if(ans.size()== 1 && ans.get(0)== -1){
-            System.out.println("No second element found.");
-        }else{
-            System.out.println("Minimum:"+ ans.get(0));
-            System.out.println("Second Minimum:"+ ans.get(1));
-        
-    }
-    sc.close();
+
+        // Find minimum and second minimum
+        ArrayList<Integer> ans = obj.minAnd2ndMin(arr);
+
+        if (ans.size() == 1 && ans.get(0) == -1) {
+            System.out.println("Second minimum element does not exist.");
+        } else {
+            System.out.println("Minimum Element       : " + ans.get(0));
+            System.out.println("Second Minimum Element: " + ans.get(1));
+        }
+
+        sc.close();
     }
 }
-        
-        
-    
-        
-    
-
