@@ -1,5 +1,18 @@
-# DSA Preparation
+# 🚀 DSA in Java
 
-This repository contains my DSA solutions and notes, organized by topic and updated regularly throughout my preparation journey.
+A personal repository documenting my journey through **Data Structures and Algorithms** using **Java**.
 
-**Language:** Java
+Here you'll find clean implementations, well-commented code, and solutions to problems I solve while learning and preparing for technical interviews.
+
+### ✨ What to Expect
+- Clean and readable Java code
+- Well-commented implementations
+- Regular updates
+- A growing collection of DSA problems
+
+### 🛠️ Built With
+- Java
+- VS Code
+- Git & GitHub
+
+---
