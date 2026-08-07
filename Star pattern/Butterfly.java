@@ -1,40 +1,51 @@
-public class Butterfly{
+public class Butterfly {
+
     public static void main(String[] args) {
-        int n=4;
-        //upper half
-        for(int i=1;i<=n;i++){
-            //left stars      
-            for(int j=1;j<=i;j++){
+
+        int n = 4;
+
+        // ---------------- Upper Half ----------------
+        for (int i = 1; i <= n; i++) {
+
+            // Print left wing stars
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
-                }
-            //space
-            for(int j=1;j<=2*(4-i);j++){
+            }
+
+            // Print spaces between the two wings
+            for (int j = 1; j <= 2 * (n - i); j++) {
                 System.out.print(" ");
             }
-            //right stars
-            for(int j=1;j<=i;j++){
-                System.out.print("*");
 
-        }
-        System.out.println();
-    }
-        //lower half
-        for(int i=n;i>=1;i--){
-            //left stars
-            for(int j=1;j<=i;j++){
+            // Print right wing stars
+            for (int j = 1; j <= i; j++) {
                 System.out.print("*");
-        }
-        //space
-        for(int j=1;j<=2*(4-i);j++){
-            System.out.print(" ");
-        }
-        //right stars
-        for(int j=1;j<=i;j++){
-            System.out.print("*");
-        }
-        System.out.println();
-    }
+            }
 
-    
-}
+            // Move to the next line after each row
+            System.out.println();
+        }
+
+        // ---------------- Lower Half ----------------
+        for (int i = n; i >= 1; i--) {
+
+            // Print left wing stars
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+
+            // Print spaces between the two wings
+            for (int j = 1; j <= 2 * (n - i); j++) {
+                System.out.print(" ");
+            }
+
+            // Print right wing stars
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+
+            // Move to the next line after each row
+            System.out.println();
+        }
+    }
 }

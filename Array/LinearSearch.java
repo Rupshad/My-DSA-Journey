@@ -1,45 +1,51 @@
 import java.util.*;
-public class LinearSearch{
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the no of index of the array:"); //taking input of array size
-        int size=sc.nextInt();
 
-        int[] arr=new int[size];
+public class LinearSearch {
 
-        for(int i=0;i<size;i++){   //taking input for array
-            System.out.println("Enter the value for index"+ i);
-            arr[i]=sc.nextInt();
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // Read the size of the array
+        System.out.print("Enter the size of the array: ");
+        int size = sc.nextInt();
+
+        int[] arr = new int[size];
+
+        // Read the array elements
+        for (int i = 0; i < size; i++) {
+            System.out.print("Enter the value for index " + i + ": ");
+            arr[i] = sc.nextInt();
         }
-        System.out.println("The following array is:"+ Arrays.toString(arr));
 
-        System.out.println("Enter target element:");  //take target element
-        int target=sc.nextInt();
+        // Display the entered array
+        System.out.println("The array is: " + Arrays.toString(arr));
 
-        int index=-1;  //linear search logic
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]==target){
-                index=i;
+        // Read the target element to search
+        System.out.print("Enter the target element: ");
+        int target = sc.nextInt();
+
+        // Assume the target is not found initially
+        int index = -1;
+
+        // Traverse the array to find the target
+        for (int i = 0; i < arr.length; i++) {
+
+            // If the target is found, store its index
+            if (arr[i] == target) {
+                index = i;
                 break;
             }
         }
 
-        if(index==-1){
-            System.out.println("element not found");
+        // Display the result
+        if (index == -1) {
+            System.out.println("Element not found.");
+        } else {
+            System.out.println("Element found at index " + index);
         }
-        else{
-            System.out.println("Element found on index "+index);
-        }
 
-
-
-
-
+        // Close the Scanner object
         sc.close();
-
-
-
-
-        
     }
 }

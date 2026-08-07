@@ -1,16 +1,22 @@
 public class righthalfpyramid {
     public static void main(String[] args) {
-        int n = 4;
-        for(int i = 1; i <= n; i++) {
-            // print spaces first
-            for(int space = 1; space <= n - i; space++) {
-                System.out.print("  ");  // double space for clean look
+        int n = 4;  // Number of rows
+
+        // Loop through each row
+        for (int i = 1; i <= n; i++) {
+
+            // Print leading spaces
+            for (int space = 1; space <= n - i; space++) {
+                System.out.print("  ");  // Double space for proper alignment
             }
-            // then print stars
-            for(int star = 1; star <= i; star++) {
+
+            // Print stars for the current row
+            for (int star = 1; star <= i; star++) {
                 System.out.print("* ");
             }
-            System.out.println();  // move to next row
+
+            // Move to the next line after each row
+            System.out.println();
         }
     }
 }
