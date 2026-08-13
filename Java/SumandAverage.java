@@ -1,28 +1,39 @@
 import java.util.Scanner;
-public class SumandAverage{
-    public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
-        int positive=0, negative=0, zero=0;
-        System.out.println("Enter 10 numbers:");
-        for(int i=1; i<=10; i++){
-            System.out.println("Enter no"+i+": ");
-            int num= input.nextInt();
 
-            if(num>0){
-            positive++;
-            }
-            else if(num<0){
+public class CountPositiveNegativeZero {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int positive = 0;
+        int negative = 0;
+        int zero = 0;
+
+        // Take 10 numbers as input
+        System.out.println("Enter 10 numbers:");
+
+        for (int i = 1; i <= 10; i++) {
+
+            System.out.print("Enter number " + i + ": ");
+            int num = input.nextInt();
+
+            // Check whether the number is positive, negative, or zero
+            if (num > 0) {
+                positive++;
+            } 
+            else if (num < 0) {
                 negative++;
-            }
-            else{
+            } 
+            else {
                 zero++;
             }
         }
-            System.out.println("The no of positive numbers are:"+ positive);
-            System.out.println("The no of negative numbers are:"+ negative);
-            System.out.println("The number of zeroes are"+ zero);
-            
-    
-    input.close();
-}
+
+        // Display the counts
+        System.out.println("Number of positive numbers: " + positive);
+        System.out.println("Number of negative numbers: " + negative);
+        System.out.println("Number of zeroes: " + zero);
+
+        input.close();
+    }
 }
