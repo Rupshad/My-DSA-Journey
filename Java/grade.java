@@ -1,9 +1,15 @@
 import java.util.Scanner;
+
 public class grade {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your grade: ");
+
+        // Take marks as input
+        System.out.print("Enter your marks: ");
         int grade = sc.nextInt();
+
+        // Check the grade based on marks
         if (grade >= 90) {
             System.out.println("Grade A+");
         }
@@ -28,8 +34,7 @@ public class grade {
         else {
             System.out.println("Grade F");
         }
+
         sc.close();
-
-
-}
+    }
 }
