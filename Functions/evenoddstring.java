@@ -1,23 +1,30 @@
-import java.util.*;
-public class evenoddstring{
+import java.util.Scanner;
+
+public class evenoddstring {
+
+    // Method to check whether a number is even or odd
     public static String EvenOddString(int a) {
-        if(a%2==0){
+
+        // If remainder is 0, the number is even
+        if (a % 2 == 0) {
             return "Even";
         }
-        else{
+        else {
             return "Odd";
         }
-        
     }
-    public static void main(String[] args){
-        Scanner sc= new Scanner(System.in);
-        System.out.println("Enter the number");
-        int a= sc.nextInt();
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // Take a number as input
+        System.out.print("Enter the number: ");
+        int a = sc.nextInt();
+
+        // Call the method and display the result
         System.out.println(EvenOddString(a));
+
         sc.close();
-
-
     }
 }
-    
-
