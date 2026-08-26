@@ -1,18 +1,23 @@
-import java.util.*;
-public class evenodd{
-    public static boolean EvenOdd(int a) {
-        return a%2==0;
-        
+import java.util.Scanner;
+
+public class evenodd {
+
+    // Method to check whether a number is even
+    public static boolean evenOdd(int a) {
+        return a % 2 == 0;
     }
-    public static void main(String[] args){
-        Scanner sc= new Scanner(System.in);
-        System.out.println("Enter the number");
-        int a= sc.nextInt();
-        System.out.println(EvenOdd(a));
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // Take a number as input
+        System.out.print("Enter the number: ");
+        int a = sc.nextInt();
+
+        // Call the method and display the result
+        System.out.println(evenOdd(a));
+
         sc.close();
-
-
     }
 }
-    
-
