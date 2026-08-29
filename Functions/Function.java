@@ -1,21 +1,23 @@
 import java.util.*;
+
 public class Function {
-    public static void PrintMyName(String name){
+
+    // Method to print the given name
+    public static void PrintMyName(String name) {
         System.out.println(name);
-        return;
     }
 
-public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Enter your name:");
-    String name = sc.next();
+    public static void main(String[] args) {
 
-    PrintMyName(name);
-    sc.close();
+        Scanner sc = new Scanner(System.in);
+
+        // Take the name as input
+        System.out.println("Enter your name:");
+        String name = sc.next();
+
+        // Call the method and pass the name
+        PrintMyName(name);
+
+        sc.close();
+    }
 }
-
-}
-
-
-    
-
