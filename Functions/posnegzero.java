@@ -27,6 +27,7 @@ public class posnegzero {
         System.out.println("Positive numbers: " + counts[0]);
 System.out.println("Negative numbers: " + counts[1]);
 System.out.println("Zeros: " + counts[2]);
+            //close the scanner class
 sc.close();
 
 
